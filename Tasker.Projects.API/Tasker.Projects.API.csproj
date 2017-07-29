@@ -25,6 +25,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tasker.Projects.Application\Tasker.Projects.Application.csproj" />
+    <ProjectReference Include="..\Tasker.Projects.Infractructure.WriteModel\Tasker.Projects.Infractructure.WriteModel.csproj" />
   </ItemGroup>
 
 </Project>

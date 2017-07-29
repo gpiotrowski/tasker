@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Tasker.Projects.Application;
+using Tasker.Common.Core.Domain;
+using Tasker.Common.Core.Events;
 using Tasker.Projects.Application.Mappers;
 using Tasker.Projects.Application.Services;
+using Tasker.Projects.Domain.Bus;
+using Tasker.Projects.Domain.Factories;
+using Tasker.Projects.Domain.Handlers;
+using Tasker.Projects.Infractructure.WriteModel.EventStore;
 
 namespace Tasker.Projects.API
 {
@@ -35,6 +36,13 @@ namespace Tasker.Projects.API
 
             services.AddTransient<IProjectsCommandService, ProjectsCommandService>();
             services.AddTransient<IProjectCommandMapper, ProjectCommandMapper>();
+            services.AddTransient<IProjectCommandBus, ProjectCommandBus>();
+            services.AddTransient<IProjectCommandHandler, ProjectCommandHandler>();
+            services.AddTransient<ISession, Session>();
+            services.AddTransient<IRepository, Repository>();
+            services.AddTransient<IEventStore, InMemoryEventStore>();
+            services.AddTransient<IEventPublisher, EventBusPublisher>();
+            services.AddTransient<IProjectFactory, ProjectFactory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
