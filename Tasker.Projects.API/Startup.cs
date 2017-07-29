@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Tasker.Projects.Application;
+using Tasker.Projects.Application.Mappers;
+using Tasker.Projects.Application.Services;
 
 namespace Tasker.Projects.API
 {
@@ -29,6 +32,9 @@ namespace Tasker.Projects.API
         {
             // Add framework services.
             services.AddMvc();
+
+            services.AddTransient<IProjectsCommandService, ProjectsCommandService>();
+            services.AddTransient<IProjectCommandMapper, ProjectCommandMapper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
