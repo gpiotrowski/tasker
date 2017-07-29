@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tasker.Infrastructure.Elasticsearch\Tasker.Infrastructure.Elasticsearch.csproj" />
+    <PackageReference Include="NEST" Version="5.5.0" />
   </ItemGroup>
 
 </Project>

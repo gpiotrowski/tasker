@@ -24,6 +24,7 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Tasker.Infrastructure.Elasticsearch\Tasker.Infrastructure.Elasticsearch.csproj" />
     <ProjectReference Include="..\Tasker.Projects.Application\Tasker.Projects.Application.csproj" />
     <ProjectReference Include="..\Tasker.Projects.Infractructure.WriteModel\Tasker.Projects.Infractructure.WriteModel.csproj" />
   </ItemGroup>

@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Tasker.Common.Core.Domain;
 using Tasker.Common.Core.Events;
+using Tasker.Infrastructure.Elasticsearch;
 using Tasker.Projects.Application.Mappers;
 using Tasker.Projects.Application.Services;
 using Tasker.Projects.Domain.Bus;
@@ -36,6 +37,7 @@ namespace Tasker.Projects.API
             // Add framework services.
             services.AddMvc();
 
+            //TODO: Move common dependencies to separate file/class
             services.AddTransient<IProjectsCommandService, ProjectsCommandService>();
             services.AddTransient<IProjectCommandMapper, ProjectCommandMapper>();
             services.AddTransient<IProjectCommandBus, InProcessProjectCommandBus>();
@@ -49,6 +51,7 @@ namespace Tasker.Projects.API
             services.AddTransient<IProjectEventHandler, ProjectEventHandler>();
             services.AddTransient<IProjectReadModelMapper, ProjectReadModelMapper>();
             services.AddTransient<IProjectRepository, ProjectRepository>();
+            services.AddTransient<IElasticClientFactory, ElasticClientFactory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
