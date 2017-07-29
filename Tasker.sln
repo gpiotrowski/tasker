@@ -7,31 +7,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{1DA413
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{D78B5976-F497-4967-9954-8A4C5CF5F78A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasker.Common.Core", "Tasker.Common.Core\Tasker.Common.Core.csproj", "{79A44C40-B832-4FF1-8277-85DAAA5034F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasker.Common.Core", "Tasker.Common.Core\Tasker.Common.Core.csproj", "{79A44C40-B832-4FF1-8277-85DAAA5034F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasker.Client.API", "Tasker.Client.API\Tasker.Client.API.csproj", "{E3D395D4-1341-4CAC-83FF-1FBFF06539E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasker.Client.API", "Tasker.Client.API\Tasker.Client.API.csproj", "{E3D395D4-1341-4CAC-83FF-1FBFF06539E9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{874EED21-8DD5-4262-B93A-876DCF2AB93B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{226315B0-8D84-4CDF-92C2-AAEBBD71F9B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasker.Projects.API", "Tasker.Projects.API\Tasker.Projects.API.csproj", "{D097444E-4A7C-4D97-AA56-FF05ED5A37B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasker.Projects.API", "Tasker.Projects.API\Tasker.Projects.API.csproj", "{D097444E-4A7C-4D97-AA56-FF05ED5A37B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasker.Projects.Domain", "Tasker.Projects.Domain\Tasker.Projects.Domain.csproj", "{EE37CB2C-D292-4B05-B9F0-3CECC2673E40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasker.Projects.Domain", "Tasker.Projects.Domain\Tasker.Projects.Domain.csproj", "{EE37CB2C-D292-4B05-B9F0-3CECC2673E40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasker.Projects.Application", "Tasker.Projects.Application\Tasker.Projects.Application.csproj", "{12AD15C5-C64F-481F-9C8A-9FE4ADB6CC7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasker.Projects.Application", "Tasker.Projects.Application\Tasker.Projects.Application.csproj", "{12AD15C5-C64F-481F-9C8A-9FE4ADB6CC7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasker.Users.API", "Tasker.Users.API\Tasker.Users.API.csproj", "{337F5011-E98F-4F01-BBD6-63ED1F9A0732}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasker.Users.API", "Tasker.Users.API\Tasker.Users.API.csproj", "{337F5011-E98F-4F01-BBD6-63ED1F9A0732}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasker.Users.Domain", "Tasker.Users.Domain\Tasker.Users.Domain.csproj", "{6921D2F7-B643-4A7A-9F27-08461549BB8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasker.Users.Domain", "Tasker.Users.Domain\Tasker.Users.Domain.csproj", "{6921D2F7-B643-4A7A-9F27-08461549BB8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasker.Users.Application", "Tasker.Users.Application\Tasker.Users.Application.csproj", "{8030C8DD-5ECC-4383-AB46-EAAD2CCFE996}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasker.Users.Application", "Tasker.Users.Application\Tasker.Users.Application.csproj", "{8030C8DD-5ECC-4383-AB46-EAAD2CCFE996}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{7CF291C8-4F32-4D53-A820-6C7ACBB40A5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasker.Projects.Infractructure.ReadModel", "Tasker.Projects.Infractructure.ReadModel\Tasker.Projects.Infractructure.ReadModel.csproj", "{489A9E7A-8462-45FB-8158-6F6D20088CF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasker.Projects.Infractructure.ReadModel", "Tasker.Projects.Infractructure.ReadModel\Tasker.Projects.Infractructure.ReadModel.csproj", "{489A9E7A-8462-45FB-8158-6F6D20088CF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasker.Projects.Infractructure.WriteModel", "Tasker.Projects.Infractructure.WriteModel\Tasker.Projects.Infractructure.WriteModel.csproj", "{FD444792-C3C1-4CAC-9332-0C5459041233}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasker.Projects.Infractructure.WriteModel", "Tasker.Projects.Infractructure.WriteModel\Tasker.Projects.Infractructure.WriteModel.csproj", "{FD444792-C3C1-4CAC-9332-0C5459041233}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

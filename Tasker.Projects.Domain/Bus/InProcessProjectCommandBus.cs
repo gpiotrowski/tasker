@@ -3,11 +3,11 @@ using Tasker.Projects.Domain.Handlers;
 
 namespace Tasker.Projects.Domain.Bus
 {
-    public class ProjectCommandBus : IProjectCommandBus
+    public class InProcessProjectCommandBus : IProjectCommandBus
     {
         private readonly IProjectCommandHandler _projectCommandHandler;
 
-        public ProjectCommandBus(IProjectCommandHandler projectCommandHandler)
+        public InProcessProjectCommandBus(IProjectCommandHandler projectCommandHandler)
         {
             _projectCommandHandler = projectCommandHandler;
         }

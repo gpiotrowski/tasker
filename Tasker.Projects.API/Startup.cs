@@ -36,13 +36,15 @@ namespace Tasker.Projects.API
 
             services.AddTransient<IProjectsCommandService, ProjectsCommandService>();
             services.AddTransient<IProjectCommandMapper, ProjectCommandMapper>();
-            services.AddTransient<IProjectCommandBus, ProjectCommandBus>();
+            services.AddTransient<IProjectCommandBus, InProcessProjectCommandBus>();
             services.AddTransient<IProjectCommandHandler, ProjectCommandHandler>();
             services.AddTransient<ISession, Session>();
             services.AddTransient<IRepository, Repository>();
             services.AddTransient<IEventStore, InMemoryEventStore>();
             services.AddTransient<IEventPublisher, EventBusPublisher>();
             services.AddTransient<IProjectFactory, ProjectFactory>();
+            services.AddTransient<IProjectEventBus, InProcessProjectEventBus>();
+            services.AddTransient<IProjectEventHandler, ProjectEventHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
