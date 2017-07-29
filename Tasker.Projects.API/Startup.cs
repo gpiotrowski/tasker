@@ -52,6 +52,7 @@ namespace Tasker.Projects.API
             services.AddTransient<IProjectReadModelMapper, ProjectReadModelMapper>();
             services.AddTransient<IProjectRepository, ProjectRepository>();
             services.AddTransient<IElasticClientFactory, ElasticClientFactory>();
+            services.AddTransient<IProjectsQueryService, ProjectsQueryService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -75,7 +76,7 @@ namespace Tasker.Projects.API
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "api/{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

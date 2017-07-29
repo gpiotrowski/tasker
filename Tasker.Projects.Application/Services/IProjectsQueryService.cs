@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using Tasker.Projects.Infractructure.ReadModel.Models;
 
-namespace Tasker.Projects.Infractructure.ReadModel.Repositories
+namespace Tasker.Projects.Application.Services
 {
-    public interface IProjectRepository
+    public interface IProjectsQueryService
     {
-        void AddProject(ProjectReadModel project);
         List<ProjectReadModel> GetAllProjects();
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using Microsoft.AspNetCore.Mvc;
 using Tasker.Projects.Application.Requests;
 using Tasker.Projects.Application.Services;
@@ -6,14 +5,15 @@ using Tasker.Projects.Application.Services;
 namespace Tasker.Projects.API.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Projects")]
     public class ProjectsController : Controller
     {
         private readonly IProjectsCommandService _projectsCommandService;
+        private readonly IProjectsQueryService _projectsQueryService;
 
-        public ProjectsController(IProjectsCommandService projectsCommandService)
+        public ProjectsController(IProjectsCommandService projectsCommandService, IProjectsQueryService projectsQueryService)
         {
             _projectsCommandService = projectsCommandService;
+            _projectsQueryService = projectsQueryService;
         }
 
         [HttpPost]
@@ -24,9 +24,10 @@ namespace Tasker.Projects.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetUserProjects(Guid userId)
+        public IActionResult GetProjects()
         {
-            return Ok();
+            var projects = _projectsQueryService.GetAllProjects();
+            return Ok(projects);
         }
     }
 }
