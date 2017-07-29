@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tasker.Common.Core\Tasker.Common.Core.csproj" />
+    <ProjectReference Include="..\Tasker.Projects.Infractructure.ReadModel\Tasker.Projects.Infractructure.ReadModel.csproj" />
   </ItemGroup>
 
 </Project>

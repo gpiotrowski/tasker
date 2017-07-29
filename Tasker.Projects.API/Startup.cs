@@ -10,6 +10,8 @@ using Tasker.Projects.Application.Services;
 using Tasker.Projects.Domain.Bus;
 using Tasker.Projects.Domain.Factories;
 using Tasker.Projects.Domain.Handlers;
+using Tasker.Projects.Domain.Mappers;
+using Tasker.Projects.Infractructure.ReadModel.Repositories;
 using Tasker.Projects.Infractructure.WriteModel.EventStore;
 
 namespace Tasker.Projects.API
@@ -45,6 +47,8 @@ namespace Tasker.Projects.API
             services.AddTransient<IProjectFactory, ProjectFactory>();
             services.AddTransient<IProjectEventBus, InProcessProjectEventBus>();
             services.AddTransient<IProjectEventHandler, ProjectEventHandler>();
+            services.AddTransient<IProjectReadModelMapper, ProjectReadModelMapper>();
+            services.AddTransient<IProjectRepository, ProjectRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
