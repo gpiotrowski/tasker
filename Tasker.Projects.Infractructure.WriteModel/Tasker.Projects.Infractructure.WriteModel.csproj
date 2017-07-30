@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Tasker.Common.Core\Tasker.Common.Core.csproj" />
+    <ProjectReference Include="..\Tasker.Infrastructure.EventStore\Tasker.Infrastructure.EventStore.csproj" />
   </ItemGroup>
 
 </Project>

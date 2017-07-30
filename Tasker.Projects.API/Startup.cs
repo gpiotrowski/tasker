@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using Tasker.Common.Core.Domain;
 using Tasker.Common.Core.Events;
 using Tasker.Infrastructure.Elasticsearch;
+using Tasker.Infrastructure.EventStore;
 using Tasker.Projects.Application.Mappers;
 using Tasker.Projects.Application.Services;
 using Tasker.Projects.Domain.Bus;
@@ -13,7 +14,7 @@ using Tasker.Projects.Domain.Factories;
 using Tasker.Projects.Domain.Handlers;
 using Tasker.Projects.Domain.Mappers;
 using Tasker.Projects.Infractructure.ReadModel.Repositories;
-using Tasker.Projects.Infractructure.WriteModel.EventStore;
+using EventStoreImpl = Tasker.Projects.Infractructure.WriteModel.EventStore.EventStore;
 
 namespace Tasker.Projects.API
 {
@@ -44,7 +45,7 @@ namespace Tasker.Projects.API
             services.AddTransient<IProjectCommandHandler, ProjectCommandHandler>();
             services.AddTransient<ISession, Session>();
             services.AddTransient<IRepository, Repository>();
-            services.AddTransient<IEventStore, InMemoryEventStore>();
+            services.AddTransient<IEventStore, EventStoreImpl>();
             services.AddTransient<IEventPublisher, EventBusPublisher>();
             services.AddTransient<IProjectFactory, ProjectFactory>();
             services.AddTransient<IProjectEventBus, InProcessProjectEventBus>();
@@ -53,6 +54,7 @@ namespace Tasker.Projects.API
             services.AddTransient<IProjectRepository, ProjectRepository>();
             services.AddTransient<IElasticClientFactory, ElasticClientFactory>();
             services.AddTransient<IProjectsQueryService, ProjectsQueryService>();
+            services.AddTransient<IEventStoreClientFactory, EventStoreClientFactory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
