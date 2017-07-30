@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading;
 using Tasker.Common.Core.Events;
 
-namespace Tasker.Projects.Infractructure.WriteModel.EventStore
+namespace Tasker.Common.Infrastructure.WriteModel.EventStore
 {
     public class InMemoryEventStore : IEventStore
     {

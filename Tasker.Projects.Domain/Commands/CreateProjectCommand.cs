@@ -1,5 +1,4 @@
-﻿using System;
-using Tasker.Common.Core.Commands;
+﻿using Tasker.Common.Core.Commands;
 
 namespace Tasker.Projects.Domain.Commands
 {

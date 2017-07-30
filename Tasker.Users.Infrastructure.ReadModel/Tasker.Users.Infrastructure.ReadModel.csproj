@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tasker.Users.Domain\Tasker.Users.Domain.csproj" />
+    <ProjectReference Include="..\Tasker.Infrastructure.Elasticsearch\Tasker.Infrastructure.Elasticsearch.csproj" />
   </ItemGroup>
 
 </Project>

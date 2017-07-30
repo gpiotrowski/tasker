@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 using Tasker.Common.Core.Events;
 using Tasker.Infrastructure.EventStore;
 
-namespace Tasker.Projects.Infractructure.WriteModel.EventStore
+namespace Tasker.Common.Infrastructure.WriteModel.EventStore
 {
     public class EventStore : IEventStore
     {
@@ -33,8 +33,6 @@ namespace Tasker.Projects.Infractructure.WriteModel.EventStore
             }
 
             _client.AppendToStreamAsync(eventedAggregateId.ToString(), ExpectedVersion.Any, eventsToSend).Wait();
-
-            Get(eventedAggregateId, 0);
         }
 
         public IEnumerable<IEvent> Get(Guid aggregateId, int fromVersion, CancellationToken cancellationToken = new CancellationToken())

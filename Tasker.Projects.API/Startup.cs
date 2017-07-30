@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Tasker.Common.Core.Bus;
 using Tasker.Common.Core.Domain;
 using Tasker.Common.Core.Events;
 using Tasker.Infrastructure.Elasticsearch;
@@ -14,7 +15,7 @@ using Tasker.Projects.Domain.Factories;
 using Tasker.Projects.Domain.Handlers;
 using Tasker.Projects.Domain.Mappers;
 using Tasker.Projects.Infractructure.ReadModel.Repositories;
-using EventStoreImpl = Tasker.Projects.Infractructure.WriteModel.EventStore.EventStore;
+using EventStoreImpl = Tasker.Common.Infrastructure.WriteModel.EventStore.EventStore;
 
 namespace Tasker.Projects.API
 {
@@ -48,7 +49,7 @@ namespace Tasker.Projects.API
             services.AddTransient<IEventStore, EventStoreImpl>();
             services.AddTransient<IEventPublisher, EventBusPublisher>();
             services.AddTransient<IProjectFactory, ProjectFactory>();
-            services.AddTransient<IProjectEventBus, InProcessProjectEventBus>();
+            services.AddTransient<IEventBus, InProcessProjectEventBus>();
             services.AddTransient<IProjectEventHandler, ProjectEventHandler>();
             services.AddTransient<IProjectReadModelMapper, ProjectReadModelMapper>();
             services.AddTransient<IProjectRepository, ProjectRepository>();

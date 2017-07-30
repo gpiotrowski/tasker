@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Tasker.Projects.Infractructure.WriteModel
+namespace Tasker.Common.Infrastructure.WriteModel
 {
     public static class JsonSerializerSharedSettings
     {

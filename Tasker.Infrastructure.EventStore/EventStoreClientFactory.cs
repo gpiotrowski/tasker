@@ -17,7 +17,7 @@ namespace Tasker.Infrastructure.EventStore
         {
             //TODO: Move to configuration file
             var address = "127.0.0.1";
-            var port = 32772;
+            var port = 32774;
 
             IPAddress.TryParse(address, out IPAddress ipAddress);
             var endpoint = new IPEndPoint(ipAddress, port);
