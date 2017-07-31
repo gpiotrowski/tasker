@@ -8,6 +8,7 @@ namespace Tasker.Projects.Domain.Aggregates
     public class Project : AggregateRoot
     {
         private string _name;
+        private Guid _ownerId;
 
         internal Project(Guid id, string name)
         {
@@ -15,10 +16,22 @@ namespace Tasker.Projects.Domain.Aggregates
             ApplyChange(new ProjectCreatedEvent(id, name));
         }
 
+        public void SetOwner(Guid ownerId)
+        {
+            var projectOwnerSettedEvent = new ProjectOwnerSettedEvent(ownerId);
+            ApplyChange(projectOwnerSettedEvent);
+        }
+
         private void Apply(ProjectCreatedEvent e)
         {
             Version = e.Version;
             _name = e.Name;
+        }
+
+        private void Apply(ProjectOwnerSettedEvent e)
+        {
+            Version = e.Version;
+            _ownerId = e.OwnerId;
         }
     }
 }

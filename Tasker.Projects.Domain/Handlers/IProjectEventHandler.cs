@@ -3,7 +3,9 @@ using Tasker.Projects.Domain.Events;
 
 namespace Tasker.Projects.Domain.Handlers
 {
-    public interface IProjectEventHandler : IEventHandler<ProjectCreatedEvent>
+    public interface IProjectEventHandler : 
+        IEventHandler<ProjectCreatedEvent>,
+        IEventHandler<ProjectOwnerSettedEvent>
     {
         
     }

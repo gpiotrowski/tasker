@@ -16,5 +16,10 @@ namespace Tasker.Projects.Domain.Bus
         {
             _projectEventHandler.Handle(@event);
         }
+
+        public void Publish(ProjectOwnerSettedEvent @event)
+        {
+            _projectEventHandler.Handle(@event);
+        }
     }
 }

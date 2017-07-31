@@ -1,4 +1,5 @@
-﻿using Tasker.Common.Core.Commands;
+﻿using System;
+using Tasker.Common.Core.Commands;
 
 namespace Tasker.Projects.Domain.Commands
 {
@@ -6,5 +7,6 @@ namespace Tasker.Projects.Domain.Commands
     {
         public int ExpectedVersion { get; set;  }
         public string ProjectName { get; set; }
+        public Guid OwnerId { get; set; }
     }
 }

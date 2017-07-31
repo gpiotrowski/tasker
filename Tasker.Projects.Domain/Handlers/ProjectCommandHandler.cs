@@ -17,7 +17,7 @@ namespace Tasker.Projects.Domain.Handlers
 
         public void Handle(CreateProjectCommand message)
         {
-            var project = _projectFactory.CreateProject(message.ProjectName);
+            var project = _projectFactory.CreateProject(message.ProjectName, message.OwnerId);
             _session.Add(project);
             _session.Commit();
         }

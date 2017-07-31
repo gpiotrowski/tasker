@@ -17,6 +17,7 @@ namespace Tasker.Projects.Application.Services
 
         public void CreateProject(CreateProjectRequest request)
         {
+            //TODO: Validate request
             var createProjectCommand = _projectCommandMapper.MapFromRequest(request);
             _projectCommandBus.Send(createProjectCommand);
         }

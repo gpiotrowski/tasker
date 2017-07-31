@@ -9,7 +9,8 @@ namespace Tasker.Projects.Application.Mappers
         {
             var createProjectCommand = new CreateProjectCommand()
             {
-                ProjectName = request.Name
+                ProjectName = request.Name,
+                OwnerId = request.OwnerId
             };
 
             return createProjectCommand;

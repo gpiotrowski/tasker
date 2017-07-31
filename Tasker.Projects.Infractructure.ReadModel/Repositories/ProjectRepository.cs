@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Nest;
 using Tasker.Infrastructure.Elasticsearch;
 using Tasker.Projects.Infractructure.ReadModel.Models;
+using Tasker.Projects.Infractructure.ReadModel.UpdateModels;
 
 namespace Tasker.Projects.Infractructure.ReadModel.Repositories
 {
@@ -28,6 +30,19 @@ namespace Tasker.Projects.Infractructure.ReadModel.Repositories
 
             var searchResponse = client.Search<ProjectReadModel>();
             return searchResponse.Documents.ToList();
+        }
+
+        public void SetProjectOwner(Guid projectId, Guid ownerId)
+        {
+            var client = GetElasticClient();
+
+            var projectUpdateOwner = new ProjectUpdateOwner()
+            {
+                OwnerId = ownerId
+            };
+
+            var response = client.Update<ProjectReadModel, ProjectUpdateOwner>(projectId, u => u
+                .Doc(projectUpdateOwner));
         }
 
         private IElasticClient GetElasticClient()

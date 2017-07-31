@@ -1,9 +1,10 @@
-﻿using Tasker.Projects.Domain.Aggregates;
+﻿using System;
+using Tasker.Projects.Domain.Aggregates;
 
 namespace Tasker.Projects.Domain.Factories
 {
     public interface IProjectFactory
     {
-        Project CreateProject(string name);
+        Project CreateProject(string name, Guid ownerId);
     }
 }

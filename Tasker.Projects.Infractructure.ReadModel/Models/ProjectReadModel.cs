@@ -6,5 +6,6 @@ namespace Tasker.Projects.Infractructure.ReadModel.Models
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
+        public Guid OwnerId { get; set; }
     }
 }

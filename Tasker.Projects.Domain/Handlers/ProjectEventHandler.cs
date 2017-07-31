@@ -20,5 +20,10 @@ namespace Tasker.Projects.Domain.Handlers
             var projectReadModel = _projectReadModelMapper.Map(message);
             _projectRepository.AddProject(projectReadModel);
         }
+
+        public void Handle(ProjectOwnerSettedEvent message)
+        {
+            _projectRepository.SetProjectOwner(message.Id, message.OwnerId);
+        }
     }
 }
