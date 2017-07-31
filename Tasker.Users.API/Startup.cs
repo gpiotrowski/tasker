@@ -73,8 +73,6 @@ namespace Tasker.Users.API
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles();
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

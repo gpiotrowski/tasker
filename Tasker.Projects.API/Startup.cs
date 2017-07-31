@@ -10,11 +10,13 @@ using Tasker.Infrastructure.Elasticsearch;
 using Tasker.Infrastructure.EventStore;
 using Tasker.Projects.Application.Mappers;
 using Tasker.Projects.Application.Services;
+using Tasker.Projects.Application.Validations;
 using Tasker.Projects.Domain.Bus;
 using Tasker.Projects.Domain.Factories;
 using Tasker.Projects.Domain.Handlers;
 using Tasker.Projects.Domain.Mappers;
 using Tasker.Projects.Infractructure.ReadModel.Repositories;
+using Tasker.Users.API.Client;
 using EventStoreImpl = Tasker.Common.Infrastructure.WriteModel.EventStore.EventStore;
 
 namespace Tasker.Projects.API
@@ -56,6 +58,8 @@ namespace Tasker.Projects.API
             services.AddTransient<IElasticClientFactory, ElasticClientFactory>();
             services.AddTransient<IProjectsQueryService, ProjectsQueryService>();
             services.AddTransient<IEventStoreClientFactory, EventStoreClientFactory>();
+            services.AddTransient<IProjectCommandValidation, ProjectCommandValidation>();
+            services.AddTransient<IUserApiClient, UserApiClient>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -72,8 +76,6 @@ namespace Tasker.Projects.API
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
-            app.UseStaticFiles();
 
             app.UseMvc(routes =>
             {

@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tasker.Projects.Domain\Tasker.Projects.Domain.csproj" />
+    <ProjectReference Include="..\Tasker.Users.API.Client\Tasker.Users.API.Client.csproj" />
   </ItemGroup>
 
 </Project>
