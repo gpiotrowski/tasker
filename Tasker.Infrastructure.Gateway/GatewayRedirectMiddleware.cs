@@ -39,7 +39,8 @@ namespace Tasker.Infrastructure.Gateway
                 if (targetHost != String.Empty)
                 {
                     var protocol = context.Request.IsHttps ? "https" : "http";
-                    context.Response.Redirect($"{protocol}://{targetHost}{context.Request.Path}");
+                    //TODO: context.Response.Redirect work only with GET request - find other solution for POST request
+                    context.Response.Redirect($"{protocol}://{targetHost}{context.Request.Path}{context.Request.QueryString}");
                 }
                 else
                 {
