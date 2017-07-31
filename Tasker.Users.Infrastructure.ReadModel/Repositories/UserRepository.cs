@@ -1,4 +1,5 @@
-﻿using Nest;
+﻿using System;
+using Nest;
 using Tasker.Infrastructure.Elasticsearch;
 using Tasker.Users.Infrastructure.ReadModel.Models;
 
@@ -18,6 +19,15 @@ namespace Tasker.Users.Infrastructure.ReadModel.Repositories
             var client = GetElasticClient();
 
             var response = client.Index(user);
+        }
+
+        public bool CheckIfUserExist(Guid userId)
+        {
+            var client = GetElasticClient();
+
+            var isUserExist = client.DocumentExists<UserReadModel>(userId).Exists;
+
+            return isUserExist;
         }
 
         private IElasticClient GetElasticClient()

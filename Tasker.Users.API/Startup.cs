@@ -55,6 +55,7 @@ namespace Tasker.Users.API
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IElasticClientFactory, ElasticClientFactory>();
             services.AddTransient<IEventStoreClientFactory, EventStoreClientFactory>();
+            services.AddTransient<IUserQueryService, UserQueryService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

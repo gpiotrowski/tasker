@@ -8,10 +8,12 @@ namespace Tasker.Users.API.Controllers
     public class UsersController : Controller
     {
         private readonly IUserCommandService _userCommandService;
+        private readonly IUserQueryService _userQueryService;
 
-        public UsersController(IUserCommandService userCommandService)
+        public UsersController(IUserCommandService userCommandService, IUserQueryService userQueryService)
         {
             _userCommandService = userCommandService;
+            _userQueryService = userQueryService;
         }
 
         [HttpPost]
@@ -19,6 +21,17 @@ namespace Tasker.Users.API.Controllers
         {
             _userCommandService.CreateUser(createUserRequest);
             return Ok();
+        }
+
+        public IActionResult CheckIfUserExist(CheckIfUserExistRequest checkIfUserExistRequest)
+        {
+            var isUserExist = _userQueryService.CheckIfUserExist(checkIfUserExistRequest);
+
+            if (isUserExist)
+            {
+                return Ok();
+            }
+            return NotFound();
         }
     }
 }
