@@ -43,7 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasker.Common.Infrastructur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasker.Infrastructure.EventStore", "Tasker.Infrastructure.EventStore\Tasker.Infrastructure.EventStore.csproj", "{3A396A4F-27BE-43B7-9450-625EDDB067AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasker.Users.Infrastructure.ReadModel", "Tasker.Users.Infrastructure.ReadModel\Tasker.Users.Infrastructure.ReadModel.csproj", "{E48A17E6-8913-4340-8277-8FABB112A57F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasker.Users.Infrastructure.ReadModel", "Tasker.Users.Infrastructure.ReadModel\Tasker.Users.Infrastructure.ReadModel.csproj", "{E48A17E6-8913-4340-8277-8FABB112A57F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasker.Infrastructure.Gateway", "Tasker.Infrastructure.Gateway\Tasker.Infrastructure.Gateway.csproj", "{E7B9EDAC-BD0B-4F4E-8704-683C1FA81271}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,6 +105,10 @@ Global
 		{E48A17E6-8913-4340-8277-8FABB112A57F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E48A17E6-8913-4340-8277-8FABB112A57F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E48A17E6-8913-4340-8277-8FABB112A57F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7B9EDAC-BD0B-4F4E-8704-683C1FA81271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7B9EDAC-BD0B-4F4E-8704-683C1FA81271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7B9EDAC-BD0B-4F4E-8704-683C1FA81271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7B9EDAC-BD0B-4F4E-8704-683C1FA81271}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -124,5 +130,6 @@ Global
 		{CE448539-DAD8-4D8C-894F-BB85B1FFD3E2} = {AEE04620-AA56-4A61-B900-89C103D5B5F5}
 		{3A396A4F-27BE-43B7-9450-625EDDB067AB} = {DE35A877-0E8F-49C3-969E-9B7A8447DCF6}
 		{E48A17E6-8913-4340-8277-8FABB112A57F} = {10FA7B63-8C27-4BA3-8F5E-318057E9087F}
+		{E7B9EDAC-BD0B-4F4E-8704-683C1FA81271} = {DE35A877-0E8F-49C3-969E-9B7A8447DCF6}
 	EndGlobalSection
 EndGlobal
